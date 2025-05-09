@@ -14,7 +14,7 @@ class Pagination:
 
     def go_to_page(self, page_num):
         if page_num < 1 or page_num > self.total_pages:
-            raise ValueError("Page number out of range.")
+            raise ValueError(f"Page number {page_num} out of range. Total pages: {self.total_pages}")
         self.current_idx = page_num - 1
 
     def first_page(self):
@@ -37,37 +37,20 @@ class Pagination:
 
     def __str__(self):
         return '\n'.join(self.get_visible_items())
-    if _name_ == "_main_":
-      items = [f"Item {i+1}" for i in range(25)]
-    paginator = Pagination(items, page_size=10)
 
-    print("=== Première page ===")
-    print(paginator.first_page())
+alphabetList = list("abcdefghijklmnopqrstuvwxyz")
+p = Pagination(alphabetList, 4)
 
-    print("\n=== Deuxième page ===")
-    paginator.next_page()
-    print(paginator)
+print(p.get_visible_items())
+p.next_page()
+print(p.get_visible_items())
+p.last_page()
+print(p.get_visible_items())
 
-    print("\n=== Dernière page ===")
-    paginator.last_page()
-    print(paginator)
+print(f"Total pages: {p.total_pages}")
 
-    print("\n=== Page précédente ===")
-    paginator.previous_page()
-    print(paginator)
-
-    print("\n=== Aller à la page 2 ===")
-    paginator.go_to_page(2)
-    print(paginator)
-
-    print("\n=== Essayer une page invalide (page 0) ===")
-    try:
-        paginator.go_to_page(0)
-    except ValueError as e:
-        print(f"Erreur attrapée : {e}")
-
-    print("\n=== Essayer une page invalide (page 100) ===")
-    try:
-        paginator.go_to_page(100)
-    except ValueError as e:
-        print(f"Erreur attrapée : {e}")
+try:
+    p.go_to_page(10)
+    print(p.current_idx + 1)
+except ValueError as e:
+    print(e)
