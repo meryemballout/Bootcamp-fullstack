@@ -27,3 +27,5 @@ SELECT * FROM students WHERE id IN (1, 3);
 SELECT * FROM students WHERE birth_date >= '2000-01-01';
 
 
+
+
