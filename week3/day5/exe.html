@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coloring Squares</title>
+  <style>
+  body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.palette {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#clear {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  gap: 5px;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(50, 15px);
+  grid-template-rows: repeat(30, 15px);
+  gap: 1px;
+  background-color: #ccc;
+  padding: 5px;
+}
+
+.cell {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="palette">
+      <button id="clear">Clear</button>
+      <div class="colors">
+        <div class="color" style="background-color: red;"></div>
+        <div class="color" style="background-color: orange;"></div>
+        <div class="color" style="background-color: gold;"></div>
+        <div class="color" style="background-color: yellow;"></div>
+        <div class="color" style="background-color: olivedrab;"></div>
+        <div class="color" style="background-color: lightgreen;"></div>
+        <div class="color" style="background-color: green;"></div>
+        <div class="color" style="background-color: mediumturquoise;"></div>
+        <div class="color" style="background-color: cyan;"></div>
+        <div class="color" style="background-color: lightskyblue;"></div>
+        <div class="color" style="background-color: deepskyblue;"></div>
+        <div class="color" style="background-color: blue;"></div>
+        <div class="color" style="background-color: darkblue;"></div>
+        <div class="color" style="background-color: purple;"></div>
+        <div class="color" style="background-color: darkmagenta;"></div>
+        <div class="color" style="background-color: violet;"></div>
+        <div class="color" style="background-color: pink;"></div>
+        <div class="color" style="background-color: lightgray;"></div>
+        <div class="color" style="background-color: gray;"></div>
+        <div class="color" style="background-color: black;"></div>
+        <div class="color" style="background-color: white;"></div>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <script src="exe.js"></script>
+</body>
+</html>
