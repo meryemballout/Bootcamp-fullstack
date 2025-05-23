@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo List with Tailwind CSS</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN for "X" icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1K3VXQ4CBXnXq69lP06jbi1YNF5W0NylbPv0xY80z0Gv9bY4SpZkuH1lh0Ua75yJqLNRzJ5y2t8tePbwK1hZw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <main class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4 text-center">My Todo List</h1>
+    
+    <!-- Form to add new task -->
+    <form id="taskForm" class="flex mb-6">
+      <input
+        type="text"
+        id="taskInput"
+        class="flex-grow border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        placeholder="Add a new task"
+      />
+      <button
+        type="submit"
+        class="bg-indigo-600 text-white px-4 rounded-r hover:bg-indigo-700 transition"
+      >
+        Add
+      </button>
+    </form>
+
+    <!-- Task list container -->
+    <div class="listTasks space-y-3"></div>
+
+    <button
+      id="clearBtn"
+      class="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
+    >
+      Clear
+    </button>
+  </main>
+
+  <script src="exe.js"></script>
+</body>
+</html>
