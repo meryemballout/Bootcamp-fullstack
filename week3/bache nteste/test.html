@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>لعبتي مع DOM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    #myText {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="myText">أنا جملة زوينة 🌸</h1>
+
+  <button onclick="changeColor()">بدل اللون 🎨</button>
+  <button onclick="addParagraph()">زيد فقرة ➕</button>
+  <button onclick="removeParagraph()">حيد الفقرة ❌</button>
+
+  <div id="container"></div>
+
+  <script>
+    function changeColor() {
+      const text = document.getElementById("myText");
+      text.style.color = text.style.color === "blue" ? "purple" : "blue";
+    }
+
+    function addParagraph() {
+      const para = document.createElement("p");
+      para.textContent = "أنا فقرة جديدة! 🍭";
+      para.id = "newPara";
+      document.getElementById("container").appendChild(para);
+    }
+
+    function removeParagraph() {
+      const para = document.getElementById("newPara");
+      if (para) {
+        para.remove();
+      }
+    }
+  </script>
+
+</body>
+</html>
