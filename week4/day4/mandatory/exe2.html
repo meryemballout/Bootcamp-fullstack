@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+</head>
+<body>
+
+  <form action="result2.html" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" size="30"><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Send">
+  </form>
+ 
+<script>
+  //Data sent by a form using POST is not visible in the URL (unlike GET).
+
+//To see the sent data, open the Network tab in your browser’s developer tools (usually with F12 or right-click → Inspect → Network).
+
+//There, you’ll see a POST request to the form’s URL (the same page).
+
+//Clicking this request, you can view the sent data under the Payload or Body section, showing the form fields and their values (like name, message, etc.).
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #quoteDisplay { margin: 20px 0; font-size: 1.2em; }
+    button, input { margin: 5px; padding: 5px 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>Random Quote Generator</h1>
+
+  <section id="quoteDisplay"></section>
+  <button onclick="generateQuote()">Generate Quote</button>
+
+  <h2>Add a Quote</h2>
+  <form onsubmit="addQuote(event)">
+    <input type="text" id="newQuote" placeholder="Quote" required>
+    <input type="text" id="newAuthor" placeholder="Author" required>
+    <button type="submit">Add Quote</button>
+  </form>
+
+  <h2>Quote Info</h2>
+  <button onclick="countChars(true)">Characters (with spaces)</button>
+  <button onclick="countChars(false)">Characters (without spaces)</button>
+  <button onclick="countWords()">Word Count</button>
+  <button onclick="likeQuote()">Like ❤️</button>
+
+  <h2>Filter by Author</h2>
+  <form onsubmit="filterByAuthor(event)">
+    <input type="text" id="authorFilter" placeholder="Author name">
+    <button type="submit">Search</button>
+  </form>
+  <button onclick="prevFiltered()">Previous</button>
+  <button onclick="nextFiltered()">Next</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

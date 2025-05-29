@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Result</title>
+</head>
+<body>
+    <h2>Submitted Data</h2>
+    <section id="result"></section>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const lastName = params.get("firstName");
+        const firstName = params.get("lastName");
+
+        const resultSection = document.getElementById("result");
+        resultSection.innerHTML = `<p>Last Name: ${lastName}</p><p>First Name: ${firstName}</p>`;
+    </script>
+</body>
+</html>
