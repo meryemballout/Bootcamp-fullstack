@@ -1,0 +1,1 @@
+echo "Ceci est un exemple de fichier texte." > data/example.txt

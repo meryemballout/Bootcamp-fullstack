@@ -1,0 +1,1 @@
+echo "This is the content of the source file." > source.txt

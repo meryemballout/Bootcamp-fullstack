@@ -1,0 +1,2 @@
+ir -p files
+echo "This is some sample text inside the file-data.txt file." > files/file-data.txt
