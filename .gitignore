@@ -1,1 +1,6 @@
 *.env
+/week6/day2/exercises/book-api/node_modules
+
+/week6/day2/exercises/book-api/package.json
+/week6/day2/exercises/book-api/package-lock.json
+
