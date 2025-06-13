@@ -1,0 +1,23 @@
+<div class="row">
+  <% if (posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5><a href="<%= post.link %>" target="_blank"><%= post.title %></a></h5>
+            <p><strong>Date:</strong> <%= post.pubDate %></p>
+            <% if (post.creator) { %>
+              <p><strong>Author:</strong> <%= post.creator %></p>
+            <% } %>
+            <% if (post.categories && post.categories.length > 0) { %>
+              <p><strong>Category:</strong> <%= post.categories.join(', ') %></p>
+            <% } %>
+            <p><%= post.contentSnippet %></p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <p>No posts found.</p>
+  <% } %>
+</div>

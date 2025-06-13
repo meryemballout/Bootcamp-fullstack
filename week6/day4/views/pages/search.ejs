@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RSS Reader - Search</title>
+</head>
+<body>
+  <h1>Search Posts</h1>
+  <form method="POST" action="/search/title">
+    <input type="text" name="title" placeholder="Search by Title" />
+    <button type="submit">Search</button>
+  </form>
+
+  <form method="POST" action="/search/category">
+    <input type="text" name="category" placeholder="Search by Category" />
+    <button type="submit">Search</button>
+  </form>
+
+  <h2>Results:</h2>
+  <ul>
+    <% posts.forEach(post => { %>
+      <li>
+        <a href="<%= post.link %>" target="_blank"><%= post.title %></a>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

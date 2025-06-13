@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include ../partials/head %>
+<body>
+  <% include ../partials/header %>
+
+  <h2>Search Facts</h2>
+
+  <form method="POST" action="/search/title" class="mb-3">
+    <input type="text" name="title" placeholder="Search by title" class="form-control mb-2">
+    <button type="submit" class="btn btn-primary">Search by Title</button>
+  </form>
+
+  <form method="POST" action="/search/category" class="mb-3">
+    <select name="category" class="form-select mb-2">
+      <option value="History">History</option>
+      <option value="Geography">Geography</option>
+      <option value="People">People</option>
+     
+    </select>
+    <button type="submit" class="btn btn-secondary">Search by Category</button>
+  </form>
+
+  <% include ../partials/posts %>
+  <% include ../partials/footer %>
+</body>
+</html>
