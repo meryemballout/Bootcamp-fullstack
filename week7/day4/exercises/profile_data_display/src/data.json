@@ -1,0 +1,23 @@
+{
+  "SocialMedias": [
+    { "platform": "LinkedIn", "url": "https://linkedin.com/in/example" },
+    { "platform": "GitHub", "url": "https://github.com/example" },
+    { "platform": "Twitter", "url": "https://twitter.com/example" }
+  ],
+  "Skills": {
+    "languages": ["JavaScript", "Python", "Java"],
+    "frameworks": ["React", "Express", "Spring Boot"]
+  },
+  "Experiences": [
+    {
+      "company": "TechCorp",
+      "position": "Frontend Developer",
+      "years": "2022-2023"
+    },
+    {
+      "company": "DevSolutions",
+      "position": "Full Stack Developer",
+      "years": "2020-2022"
+    }
+  ]
+}
